@@ -20,7 +20,9 @@ import PyBoolNet.Utility
 import PyBoolNet.BooleanLogic
 import PyBoolNet.Tests
 
-import pprint as prettyprint
+import PyBoolNet.transformations
+
+import pprint as pretty_print
 
 
 def version() -> str:
@@ -28,5 +30,5 @@ def version() -> str:
 
 
 def pprint(x):
-    pp = prettyprint.PrettyPrinter(indent=4)
+    pp = pretty_print.PrettyPrinter(indent=4)
     pp.pprint(x)

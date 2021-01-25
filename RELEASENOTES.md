@@ -1,6 +1,8 @@
 
 
 ## release notes for next version
+ - added module `PyBoolNet.transformations`
+ - dropped support for Python 2.x
  - adds `selvaggio_emt` to repository, see http://ginsim.org/model/EMT_Selvaggio_etal
  - migrated unit tests to pytest framework
  - bugfix in `STGs.successors_mixed` (by @nanls)

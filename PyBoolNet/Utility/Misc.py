@@ -1,19 +1,11 @@
 
-import PyBoolNet
 import os
-
-try:
-    # Python 2.x
-    import ConfigParser as configparser
-
-except ImportError:
-    # Python 3.x
-    import configparser
-
-myconfigparser = configparser
-
+import configparser
 import math
 import json
+
+import PyBoolNet
+
 
 COLOR_MAP = {"red1": "#df3e47", "green1": "#4bb93f", "blue1": "#7463b3", "yellow1": "#eecf1a", "pink1": "#db42a6", "green2": "#4cbd38", "red2": "#df3d47", "yellow2": "#efce1a"}
 COLORS = ["dodgerblue3", "firebrick2", "chartreuse3", "gold1", "aquamarine2", "darkorchid2"]
@@ -21,6 +13,8 @@ UPDATES = ["synchronous", "asynchronous", "mixed"]
 GRAPHVIZ_ENGINES = ["dot", "neato", "fdp", "sfdp", "circo", "twopi"]
 
 BASE = os.path.join(os.path.dirname(PyBoolNet.__file__))
+
+
 def _load_cfg():
     config = configparser.SafeConfigParser()
     settings_file = os.path.join(BASE, "Dependencies", "settings.cfg")
@@ -36,10 +30,14 @@ def _load_cfg():
         execs = { n:config.get("Executables", n) for n in config.options("Executables") }
     
     return execs
+
+
 EXECUTABLES = _load_cfg()
+
 
 def os_is_windows() -> bool:
     return os.name == 'nt'
+
 
 def find_command(name) -> str:
     """
@@ -54,6 +52,7 @@ def find_command(name) -> str:
     else:
         cmd = name
     return cmd 
+
 
 def dicts_are_consistent(d1: dict, d2: dict) -> bool:
     """

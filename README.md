@@ -1,7 +1,7 @@
 
 
 ## About PyBoolNet
-PyBoolNet is a Python package for the generation, modification and analysis of Boolean networks.
+PyBoolNet is a Python3.6 package for the generation, modification and analysis of Boolean networks.
 The accompanying paper was published with [Bioinformatics](https://academic.oup.com/bioinformatics) and is available at
 
  * https://doi.org/10.1093/bioinformatics/btw682
@@ -45,7 +45,3 @@ For release notes, see
 ## Contributions
 - send pull requests to the `develop` branch
 - add tests to `PyBoolNet/tests/` (the other location, `PyBoolNet/PyBoolNet/Tests/` is deprecated)
-
-
-## Contributions
-If you want to contribute code to PyBoolNet, please send pull requests to the `develop` branch.
